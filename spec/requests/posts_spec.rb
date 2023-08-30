@@ -22,7 +22,12 @@ describe Post, type: :request do
     it 'should render the show action correctly' do
       get "/users/#{@user.id}/posts/1"
       expect(response).to be_successful
-      expect(response).to render_template('posts/show', layout: 'layouts/application')
+      expect(response).to render_template('posts/show')
+      expect(response).to render_template(layout: 'layouts/application')
+    end
+
+    it 'includes correct placeholder text in response body for show action' do
+      get "/users/#{@user.id}/posts/1"
       expect(response.body).to include('Details of a selected post')
     end
   end
