@@ -1,0 +1,7 @@
+<%=link_to user_post_path(post.author, post), class:'post-content' do%>
+<div class='post_subcont'>
+<h3><%=post.title%></h3>
+<div><%=post.text[0, 100]%><%='...' if post.text[51]%></div>
+<p class='post-total'>Comments: <%=post.comments_counter%>, Likes: <%=post.likes_counter%></p>
+</div>
+<%end%>
