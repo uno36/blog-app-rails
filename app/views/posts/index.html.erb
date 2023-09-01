@@ -1,1 +1,7 @@
-<h1>Here is a list of posts for a given user<h1>
+<h1>Blog App</h1>
+
+<% @posts.each do |post| %>
+  <%= render 'partials/user', user: post.author %>
+  <div class='posts-div'><%= render 'partials/post', post: post %></div>
+  <%= render 'partials/comment', comments: post.recent_comments %>
+<% end %>  
