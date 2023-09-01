@@ -1,12 +1,20 @@
 <h1>Blog App</h1>
 
 <article class='no-posts'>
-  <div class='post-title' >
-  <h1><%=@post.title%> by <%=@post.author.name%><h1>
-  <div class='post-count-best'>Comments: <%=@post.comments_counter%>, Likes:<%=@post.likes_counter%>
+  <div class='post-title'>
+    <h1><%= @post.title %> by <%= @post.author.name %></h1>
+    <div class='post-count-best'>
+      Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
+    </div>
+    <div><%= @post.text %></div>
+    <%= render 'partials/comment', comments: @comments %>
+    
+    <% if current_user %>
+      <% if current_user.likes?(@post) %>
+        <%= link_to "Unlike", like_path(@post.likes.find_by(user: current_user)), method: :delete %>
+      <% else %>
+        <%= link_to "Like", likes_path(post_id: @post.id), method: :post %>
+      <% end %>
+    <% end %>
   </div>
-  <div><%=@post.text%></div>  
-  <%= render 'partials/comment', comments: @comments %>
-  
 </article>
-
