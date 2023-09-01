@@ -73,6 +73,7 @@ group :test do
   gem 'webdrivers'
 end
 gem 'dotenv-rails', groups: %i[development test]
+gem 'faker', '~> 2.20.0'
 gem 'rspec'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'shoulda-matchers', '~> 5.0'

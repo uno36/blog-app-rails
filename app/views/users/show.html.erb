@@ -1,1 +1,18 @@
-<h1>Details for a selected user with post<h1>
+<h1>Blog App</h1>
+
+<%= render 'partials/user', user: @user %>
+<div class='bio'><%= @user.bio %></div>
+<ul class='user-post-list'>
+<% if @user.recent_posts.empty? %>
+  <p class='no-posts'>No posts</p>
+<% else %>
+  <% @user.recent_posts.each do |post| %>
+    <li>
+      <%= render 'partials/post', post: post %>
+    </li>
+  <% end %>
+<% end %>
+</ul>
+<div class='content-view-all-post-btn'>
+  <%= link_to "View all posts", user_posts_path(@user), class: 'view-all-post-btn' %>
+</div>

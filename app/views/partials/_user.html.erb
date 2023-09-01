@@ -1,0 +1,10 @@
+ <div class='user-content'>
+ <%= image_tag user.photo, alt: "#{user.name} profile image", class: 'profile'%>
+  <div class='user-content2'>
+    <%= link_to user,class:'user-content-details' do
+    %>
+    <h2><%= user.name %></h2>
+    <p class='user-post-total'>Number of posts: <%=user.posts_counter%> </p>
+    <%end%>
+  </div>
+ </div>

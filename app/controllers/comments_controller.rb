@@ -1,10 +1,6 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-  end
-
-  def show
+  def show_comments
     @user = User.find(params[:id])
-    @posts = @user.posts
+    @comments = @user.comments
   end
 end

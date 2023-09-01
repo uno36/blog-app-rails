@@ -4,6 +4,8 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = 'post'
+    @user = User.find(params['user_id'])
+    @post = @user.posts.find(params['id'])
+    @comments = @post.recent_comments
   end
 end
