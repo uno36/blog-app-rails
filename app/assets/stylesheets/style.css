@@ -139,12 +139,12 @@ h2 {
 
 .form {
   width: 80%;
-  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .comment_label,

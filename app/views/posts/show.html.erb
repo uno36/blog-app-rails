@@ -7,8 +7,6 @@
       Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
     </div>
     <div><%= @post.text %></div>
-    <%= render 'partials/comment', comments: @comments %>
-    
-    
+    <%= render 'partials/comment', comments: @comments %>    
   </div>
 </article>
