@@ -13,6 +13,15 @@
   <% end %>
 <% end %>
 </ul>
-<div class='content-view-all-post-btn'>
+<div>
+  <%= form_with model: @post, class:'form', url: user_posts_path(@user) do |form| %>
+    <%= form.label :title, class: 'post_label' %>
+    <%= form.text_field :title, required: true, class:'post_title' %>
+    <%= form.label :text, class: 'post_label' %>
+    <%= form.text_area :text, required: true, class:'post_text' %>
+    <%= form.submit "Add Post", class: 'post_btn' %>
+  <% end %>
+</div>
+<div class='content-view-all-post-btn'>   
   <%= link_to "View all posts", user_posts_path(@user), class: 'view-all-post-btn' %>
 </div>

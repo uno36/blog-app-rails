@@ -1,0 +1,11 @@
+<h1>Blog App</h1>
+
+<div>
+  <%= form_with model: @post, class:'form', url: user_posts_path(@user) do |form| %>
+    <%= form.label :title, class: 'post_label' %>
+    <%= form.text_field :title, required: true, class:'post_title' %>
+    <%= form.label :text, class: 'post_label' %>
+    <%= form.text_area :text, required: true, class:'post_text' %>
+    <%= form.submit "Post", class: 'post_btn' %>
+  <% end %>
+</div>
