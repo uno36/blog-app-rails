@@ -78,5 +78,5 @@ gem 'rspec'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'shoulda-matchers', '~> 5.0'
 
-gem "devise", "~> 4.9"
 gem 'bootstrap'
+gem 'devise', '~> 4.9'
