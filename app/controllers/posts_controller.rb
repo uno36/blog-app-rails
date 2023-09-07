@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :set_user, only: %i[new create]
-
+  before_action :authenticate_user!
+  
   def index
     @posts = Post.all
   end
