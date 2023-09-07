@@ -98,12 +98,24 @@ h2 {
 .add_comment,
 .like_btn,
 .comment_btn,
-.post_btn {
+.post_btn,
+.pagination {
   background-color: #333;
   color: #fff;
   padding: 10px;
   border-radius: 8px;
   font-size: 16px;
+}
+
+.pagination {
+  width: 10%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .post_btn {
@@ -139,12 +151,12 @@ h2 {
 
 .form {
   width: 80%;
+  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
 .comment_label,
