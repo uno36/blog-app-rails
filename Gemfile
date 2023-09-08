@@ -77,3 +77,6 @@ gem 'faker', '~> 2.20.0'
 gem 'rspec'
 gem 'rubocop', '>= 1.0', '< 2.0'
 gem 'shoulda-matchers', '~> 5.0'
+
+gem 'bootstrap'
+gem 'devise', '~> 4.9'
